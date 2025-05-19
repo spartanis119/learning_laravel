@@ -13,5 +13,6 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/contact2', function () {
-    return view('testing_routes/contact2');
+    $data = ['greating' => 'Hello'];
+    return view('testing_routes/contact2', $data);
 })->name('contact2');
