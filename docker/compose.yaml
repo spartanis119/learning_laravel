@@ -1,0 +1,15 @@
+version : "3"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /opt/data
+    command: ["tail", "-f", "/dev/null"]
+    image: laravel:1.0
+    container_name: laravel_container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/opt/data
