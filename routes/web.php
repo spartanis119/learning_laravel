@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/contact', function () {
@@ -14,5 +14,5 @@ Route::get('/contact', function () {
 
 Route::get('/contact2', function () {
     $data = ['greating' => 'Hello'];
-    return view('testing_routes/contact2', $data);
+    return view('testing_routes.contact2', $data);
 })->name('contact2');
